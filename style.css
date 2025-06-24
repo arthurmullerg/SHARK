@@ -194,10 +194,7 @@
       100% { background-position: 100% 100%; }
     }
 
-    @keyframes wave-animation {
-      0% { background-position: 0 bottom; }
-      100% { background-position: 1000px bottom; }
-    }
+   
 
     /* Estilo para desktop */
     @media (min-width: 768px) {
