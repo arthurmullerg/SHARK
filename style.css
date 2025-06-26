@@ -1,4 +1,4 @@
- * {
+* {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -25,6 +25,8 @@
       width: 100%;
       z-index: 10;
       padding-bottom: 120px;
+      flex-grow: 1;
+      justify-content: center;
     }
 
     .logo-container {
@@ -78,6 +80,10 @@
       max-width: 100%;
       width: 100%;
       text-align: center;
+    }
+    
+    .location span {
+      color: #fff;
     }
 
     .buttons-container {
@@ -142,19 +148,24 @@
       height: 100px;
       overflow: hidden;
       z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
     }
 
     .waves {
-      position: absolute;
-      bottom: 0;
-      left: 0;
       width: 100%;
       height: 100%;
-      background: url('onda.png') repeat-x;
-      background-repeat: no-repeat;
-      background-size: auto 100%;
-      opacity: 0.8;
-     
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    
+    .waves img {
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      object-fit: cover;
     }
 
     @keyframes pulse {
@@ -209,9 +220,24 @@
       .location {
         max-width: 80%;
       }
+      
+      body {
+        justify-content: flex-start;
+      }
     }
     
     @media (max-width: 480px) {
+      body {
+        padding: 20px 15px;
+        min-height: 100vh;
+        height: 100%;
+      }
+      
+      .content-wrapper {
+        padding-bottom: 100px;
+        justify-content: center;
+      }
+      
       .logo-circle {
         width: 200px;
         height: 200px;
@@ -231,6 +257,21 @@
       }
       
       .waves-container {
-        height: 80px;
+        height: 100px;
+      }
+    }
+    
+    @media (max-width: 360px) {
+      .logo-circle {
+        width: 180px;
+        height: 180px;
+      }
+      
+      .logo {
+        max-width: 130px;
+      }
+      
+      h2 {
+        font-size: 1.4rem;
       }
     }
